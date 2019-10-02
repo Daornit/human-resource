@@ -1,0 +1,66 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.ComboBox?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.ColumnConstraints?>
+<?import javafx.scene.layout.GridPane?>
+<?import javafx.scene.layout.RowConstraints?>
+<?import javafx.scene.text.Font?>
+<?import javafx.scene.text.Text?>
+
+<AnchorPane prefHeight="586.0" prefWidth="792.0" style="-fx-background-color: white;" stylesheets="@style/color.css" xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="view.Rating">
+   <children>
+      <GridPane layoutX="28.0" layoutY="25.0" prefHeight="206.0" prefWidth="736.0">
+        <columnConstraints>
+          <ColumnConstraints hgrow="SOMETIMES" maxWidth="147.0" minWidth="10.0" prefWidth="117.0" />
+          <ColumnConstraints hgrow="SOMETIMES" maxWidth="191.0" minWidth="10.0" prefWidth="146.5" />
+            <ColumnConstraints hgrow="SOMETIMES" maxWidth="191.0" minWidth="10.0" prefWidth="33.0" />
+            <ColumnConstraints hgrow="SOMETIMES" maxWidth="273.0" minWidth="10.0" prefWidth="195.0" />
+            <ColumnConstraints hgrow="SOMETIMES" maxWidth="211.0" minWidth="10.0" prefWidth="211.0" />
+        </columnConstraints>
+        <rowConstraints>
+            <RowConstraints maxHeight="44.0" minHeight="10.0" prefHeight="44.0" vgrow="SOMETIMES" />
+          <RowConstraints maxHeight="48.0" minHeight="10.0" prefHeight="48.0" vgrow="SOMETIMES" />
+          <RowConstraints maxHeight="89.0" minHeight="10.0" prefHeight="39.0" vgrow="SOMETIMES" />
+          <RowConstraints maxHeight="70.0" minHeight="1.0" prefHeight="41.0" vgrow="SOMETIMES" />
+            <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+        </rowConstraints>
+         <children>
+            <Text strokeType="OUTSIDE" strokeWidth="0.0" text="Тохиргооны нэр:" GridPane.rowIndex="1" />
+            <Text strokeType="OUTSIDE" strokeWidth="0.0" text="Тохиргооны төрөл:" GridPane.rowIndex="2" />
+            <Text strokeType="OUTSIDE" strokeWidth="0.0" text="Утга:" GridPane.rowIndex="3" />
+            <TextField GridPane.columnIndex="1" GridPane.rowIndex="1" />
+            <TextField GridPane.columnIndex="1" GridPane.rowIndex="3" />
+            <Button mnemonicParsing="false" prefHeight="27.0" prefWidth="157.0" text="Бүртгэх" GridPane.rowIndex="4" />
+            <ComboBox prefWidth="150.0" GridPane.columnIndex="1" GridPane.rowIndex="2" />
+            <Text strokeType="OUTSIDE" strokeWidth="0.0" text="Тохигооны бүртгэл" wrappingWidth="229.21875" GridPane.columnSpan="2">
+               <font>
+                  <Font size="24.0" />
+               </font>
+            </Text>
+            <TextField prefHeight="27.0" prefWidth="194.0" GridPane.columnIndex="4" GridPane.rowIndex="1" />
+            <TextField editable="false" GridPane.columnIndex="4" GridPane.rowIndex="2" />
+            <Text strokeType="OUTSIDE" strokeWidth="0.0" text="Төрлийн дугаар:" GridPane.columnIndex="3" GridPane.rowIndex="2" />
+            <Text strokeType="OUTSIDE" strokeWidth="0.0" text="Төрлийн нэр:" GridPane.columnIndex="3" GridPane.rowIndex="1" />
+            <Button mnemonicParsing="false" prefHeight="27.0" prefWidth="157.0" text="Төрөл бүртгэх" GridPane.columnIndex="3" GridPane.rowIndex="3" />
+            <Text strokeType="OUTSIDE" strokeWidth="0.0" text="Тохиргооны төрлийн бүртгэл" wrappingWidth="430.97265625" GridPane.columnIndex="3">
+               <font>
+                  <Font size="24.0" />
+               </font>
+            </Text>
+         </children>
+      </GridPane>
+      <TableView layoutX="15.0" layoutY="278.0" prefHeight="200.0" prefWidth="762.0">
+        <columns>
+          <TableColumn prefWidth="118.0" text="Дугаар" />
+          <TableColumn prefWidth="158.0" text="Нэр" />
+            <TableColumn prefWidth="208.0" text="Төрөл" />
+            <TableColumn prefWidth="277.0" text="Утга" />
+        </columns>
+      </TableView>
+   </children>
+</AnchorPane>

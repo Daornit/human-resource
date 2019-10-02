@@ -1,0 +1,19 @@
+/*
+    Гол ашиглах өнгүүд
+    #344955
+    #232F34
+    #4A6572
+    #F9AA33
+*/
+.button
+{
+    -fx-background-color : #344955;
+    -fx-text-fill : white;
+}
+.button:hover{
+    -fx-background-color : #232F34;
+}
+.button:pressed
+{
+    -fx-background-color : #4A6572;
+}
