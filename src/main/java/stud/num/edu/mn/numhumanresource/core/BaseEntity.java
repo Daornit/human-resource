@@ -3,21 +3,22 @@ package stud.num.edu.mn.numhumanresource.core;
 import javax.persistence.Basic;
 import javax.persistence.Column;
 import javax.persistence.MappedSuperclass;
+import java.io.Serializable;
 import java.util.Date;
 
 @MappedSuperclass
-public class BaseEntity {
+public class BaseEntity implements Serializable {
     @Basic
     @Column(name = "VERSION")
-    private int version;
+    private Long version;
 
     @Basic
     @Column(name = "ACTIVE_FLAG")
-    private int activeFlag;
+    private Long activeFlag;
 
     @Basic
     @Column(name = "CREATED_BY")
-    private int createdBy;
+    private Long createdBy;
 
     @Basic
     @Column(name = "CREATED_DATE")
@@ -25,39 +26,39 @@ public class BaseEntity {
 
     @Basic
     @Column(name = "UPDATED_BY")
-    private int updatedBy;
+    private Long updatedBy;
 
     @Basic
     @Column(name = "UPDATED_DATE")
     private Date updatedDate;
 
     public BaseEntity() {
-        this.version = 1;
-        this.activeFlag = 1;
+        this.version = 1L;
+        this.activeFlag = 1L;
         this.createdDate = new Date();
     }
 
-    public int getVersion() {
+    public Long getVersion() {
         return version;
     }
 
-    public void setVersion(int version) {
+    public void setVersion(Long version) {
         this.version = version;
     }
 
-    public int getActiveFlag() {
+    public Long getActiveFlag() {
         return activeFlag;
     }
 
-    public void setActiveFlag(int activeFlag) {
+    public void setActiveFlag(Long activeFlag) {
         this.activeFlag = activeFlag;
     }
 
-    public int getCreatedBy() {
+    public Long getCreatedBy() {
         return createdBy;
     }
 
-    public void setCreatedBy(int createdBy) {
+    public void setCreatedBy(Long createdBy) {
         this.createdBy = createdBy;
     }
 
@@ -69,11 +70,11 @@ public class BaseEntity {
         this.createdDate = createdDate;
     }
 
-    public int getUpdatedBy() {
+    public Long getUpdatedBy() {
         return updatedBy;
     }
 
-    public void setUpdatedBy(int updatedBy) {
+    public void setUpdatedBy(Long updatedBy) {
         this.updatedBy = updatedBy;
     }
 
